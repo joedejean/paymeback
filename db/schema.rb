@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603051227) do
+ActiveRecord::Schema.define(version: 20140603193620) do
 
   create_table "borrowers", force: true do |t|
     t.integer "person_id"

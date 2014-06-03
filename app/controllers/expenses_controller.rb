@@ -4,8 +4,7 @@ class ExpensesController < ApplicationController
     Expense.create("title" => params["title"],
                  "totalamount" => params["totalamount"],
                  "date" => params["date"],
-                 "notes" => params["notes"]
-                 "page_count" => 0)
+                 "notes" => params["notes"])
 
     redirect_to "/expenses"
   end
