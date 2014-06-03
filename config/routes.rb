@@ -1,4 +1,38 @@
 Paymeback::Application.routes.draw do
+
+  # Specify a custom home page
+  get "/" => "expenses#index"
+
+    # Resource: Expenses
+
+  # --- Create
+  get "/expenses/new" => 'expenses#new'
+  post "/expenses" => 'expenses#create'
+
+  # --- Read
+  get "/expenses" => 'expenses#index'
+  get "/expenses/:id" => 'expenses#show'
+
+  # -- Update
+  get "/expenses/:id/edit" => 'expenses#edit'
+  patch "/expenses/:id" => 'expenses#update'
+
+  # --- Delete
+  delete "/expenses/:id" => 'expenses#destroy'
+
+
+
+end
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -52,5 +86,4 @@ Paymeback::Application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
-end
+

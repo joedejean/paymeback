@@ -1,0 +1,17 @@
+<h1>Expense Database</h1>
+
+<% all_expenses = Expense.read %>
+
+<hr>
+
+<ul>
+
+  <% all_expenses.each do |expense| %>
+
+
+    <li><strong><%= expense.title %></strong> (<%= expense.totalamount %>) <%= expense.date %> <%= expense.notes %> .</li>
+
+  <% end %>
+
+</ul>
+
